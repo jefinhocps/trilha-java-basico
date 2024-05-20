@@ -37,11 +37,27 @@ public class Conta {
 
     // Método para exibir os dados da conta
     public void ExibirDadosDaConta(){
+        System.out.println("*******************************************\n");
         System.out.println("Dados da Conta Bancária");
         System.out.println("Titular: " + titular);
         System.out.println("Agência: " + agencia);
         System.out.println("Numero da Conta: " + numeroConta);
         System.out.println("Saldo Disponivel: " + saldo);
+    }
+
+    // Método para sacar
+    public void RealizarSaque(double valorSolicitado){
+        saldo = getSaldo();
+
+        System.out.println("Valor de saque Solicitado: " + valorSolicitado);
+
+        if (valorSolicitado > saldo) {
+            System.out.println("O valor solicitado excede o saldo disponivel.");
+        }else{
+            saldo = saldo - valorSolicitado;
+            System.out.println("Saque realizado com sucesso: " + valorSolicitado);
+            System.out.println("Saldo atualizado: " + saldo);
+        }
     }
     
 }

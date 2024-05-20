@@ -23,6 +23,8 @@ public class ContaTerminal {
 
         novaConta.ExibirDadosDaConta();
 
+        novaConta.RealizarSaque(15);
+
     }
 }
     
